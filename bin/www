@@ -7,6 +7,7 @@
 var app = require('../app');
 var debug = require('debug')('snake:server');
 var http = require('http');
+var socketApi = require("../socketApi");
 
 /**
  * Get port from environment and store in Express.
@@ -33,9 +34,9 @@ server.on('listening', onListening);
 /**
  * Socket.io
  */
-var socketApi = require('../socketApi');
-var io = socketApi.io;
-io.attach(server);
+var io = require('socket.io').listen(server);
+require('../socketApi')(io);
+
 
 /**
  * Normalize a port into a number, string, or false.
