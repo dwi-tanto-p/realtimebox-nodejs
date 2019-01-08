@@ -61,10 +61,9 @@ $(function () {
           var speed = parseInt( e.target.value) ;
           var interval = 1000 - (speed * 10);
           clearInterval(timer);
-          if(speed>0)
-          {
-              timer = setInterval(sendKeyDown, interval);
-          }
+          
+          timer = setInterval(sendKeyDown, interval);
+          
 
         
       }
