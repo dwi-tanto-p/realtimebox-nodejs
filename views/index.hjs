@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>{{ title }}</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src='/javascripts/index.js'></script>
+
+
+</head>
+
+<body>
+  <h1>{{ title }}</h1>
+  <p>Welcome to {{ title }}</p>
+
+  <div id="snakeArea">
+   
+
+  </div>
+
+ 
+  <div class="slidecontainer">
+    <p>Speed:</p>
+    <input type="range" min="0" max="99" value="50" id="speedRange">
+  </div>
+
+</body>
+
+</html>
